@@ -20,13 +20,14 @@ export default function SellingProducts() {
 
 
         <section className="relative w-full bg-[#f7f2e9] pt-10 overflow-hidden">
-          
-          
+
+
             {/* TOP TEXT */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="text-center px-2 sm:px-6"
             >
                 <p className="text-sm font-semibold mb-3 tracking-wide">Destinations</p>
@@ -38,6 +39,7 @@ export default function SellingProducts() {
                             className="inline-block w-28 h-10 rounded-full object-cover mx-2"
                             initial={{ scale: 0.6, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
+                            viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.8 }}
                         />
                     </span>{" "}
@@ -55,6 +57,7 @@ export default function SellingProducts() {
                         initial={{ opacity: 0, y: 50, rotate: 0 }}
                         whileInView={{ opacity: 1, y: 0, rotate: index % 2 === 0 ? -6 : 6 }}
                         transition={{ duration: 0.8, delay: index * 0.4 }}
+                        viewport={{ once: true, amount: 0.2 }}
                         className="w-72 md:w-56 h-60 rounded-3xl overflow-hidden shadow-xl"
                     >
                         <img src={img} className="w-full h-full object-cover" />
@@ -68,6 +71,7 @@ export default function SellingProducts() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="mt-10 sm:mt-16 bg-white w-full py-8 sm:py-16 text-center rounded-t-4xl sm:rounded-t-[100px] shadow-[0_-20px_50px_rgba(0,0,0,0.1)]"
             >
                 <h3 className="text-2xl md:text-3xl font-semibold mb-4 font-serif">
@@ -75,7 +79,7 @@ export default function SellingProducts() {
                 </h3>
 
                 <p className="text-gray-600 max-w-xl mx-auto font-serif">
-                   Discover Our Most Popular Walling Solutions, Including The Thermal-Efficient Porotherm Briks, Which Stand For Enhancing Construction Speed, Water Conservation, &  Zero Waste Of Valuable Materials And Goods
+                    Discover Our Most Popular Walling Solutions, Including The Thermal-Efficient Porotherm Briks, Which Stand For Enhancing Construction Speed, Water Conservation, &  Zero Waste Of Valuable Materials And Goods
                 </p>
 
                 <button className="mt-6 font-serif px-8 py-3 border border-black rounded-full text-sm font-medium hover:bg-black hover:text-white transition hover:scale-105 hover:cursor-pointer">
