@@ -85,9 +85,9 @@ const CTASection = () => {
                         viewport={{ once: true, amount: 0.2 }}
                         className="mt-6"
                     >
-                        <Link to="/contact" className="hover:cursor-pointer">
+                        <Link to="/contact">
                             <button
-                                className="px-6 py-3 font-serif text-sm md:text-base font-medium rounded-full shadow-lg hover:shadow-xl transition-all"
+                                className="px-6 py-3 hover:cursor-pointer font-serif text-sm md:text-base font-medium rounded-full shadow-lg hover:shadow-xl transition-all"
                                 style={{ backgroundColor: "#3EE5B1", color: "#062B22" }}
                             >
                                 Talk to Our Experts

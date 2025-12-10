@@ -146,7 +146,8 @@ export default function Us() {
                         className="mt-8"
                     >
                         <a
-                            href="#contact"
+                            href="tel:+919847603333"
+                            target="_blank"
                             className="inline-block rounded-full px-6 py-3 text-sm md:text-base font-medium shadow-md font-serif"
                             style={{
                                 backgroundColor: "#3EE5B1",

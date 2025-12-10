@@ -2,6 +2,9 @@ import { Suspense, lazy } from "react"
 import { Route, Routes } from "react-router-dom"
 import ScrollToTop from "./components/common/ScrollToTop"
 import SuspenseLoader from "./components/loader/SuspenseLoader"
+import { ReactLenis } from "lenis/react";
+import { useLenis } from "./hooks/useLenis";
+
 
 
 // Lazy load pages
@@ -25,44 +28,49 @@ const MainLayout = lazy(() => import("./components/layout/MainLayout"))
 function App() {
 
 
+  const lenis = useLenis();
+
 
   return (
 
 
-    <Suspense fallback={<SuspenseLoader />} >
+    <ReactLenis root ref={lenis} autoRaf={false}>
 
-      <ScrollToTop />
+      <Suspense fallback={<SuspenseLoader />} >
 
-      <Routes>
+        <ScrollToTop />
 
-
-        {/* Main Layout */}
-        <Route element={<MainLayout />} >
-
-          <Route index element={<Index />} />
-
-          <Route path="about-us" element={<AboutUs />} />
-
-          <Route path="products" element={<Products />} />
-
-          <Route path="contact" element={<Contact />} />
-
-          <Route path="terms-and-conditions" element={<Terms />} />
-
-          <Route path="privacy-policy" element={<Privacy />} />
-
-        </Route>
+        <Routes>
 
 
-        {/* 404 Page */}
-        <Route path="*" element={<NotFound />} />
+          {/* Main Layout */}
+          <Route element={<MainLayout />} >
+
+            <Route index element={<Index />} />
+
+            <Route path="about-us" element={<AboutUs />} />
+
+            <Route path="products" element={<Products />} />
+
+            <Route path="contact" element={<Contact />} />
+
+            <Route path="terms-and-conditions" element={<Terms />} />
+
+            <Route path="privacy-policy" element={<Privacy />} />
+
+          </Route>
 
 
-      </Routes>
+          {/* 404 Page */}
+          <Route path="*" element={<NotFound />} />
 
 
-    </Suspense>
+        </Routes>
 
+
+      </Suspense>
+
+    </ReactLenis> 
 
   )
 
