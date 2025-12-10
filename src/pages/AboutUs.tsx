@@ -1,6 +1,7 @@
 import HeroBanner from "@/components/common/HeroBanner";
 import { motion } from "framer-motion";
 import { MoveUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 
@@ -278,12 +279,14 @@ export default function About() {
                                 viewport={{ once: true, amount: 0.2 }}
                                 className="mt-6"
                             >
-                                <button
-                                    className="px-6 py-3 text-sm md:text-base font-serif font-medium rounded-full bg-[#3EE5B1] text-[#062B22] shadow-lg flex items-center gap-2 hover:bg-[#33d2a1] hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:cursor-pointer"
-                                >
-                                    Explore Products
-                                    <MoveUpRight size={18} className="transition-transform group-hover:translate-x-1" />
-                                </button>
+                                <Link to="/products" className="group">
+                                    <button
+                                        className="px-6 py-3 text-sm md:text-base font-serif font-medium rounded-full bg-[#3EE5B1] text-[#062B22] shadow-lg flex items-center gap-2 hover:bg-[#33d2a1] hover:scale-105 hover:shadow-2xl transition-all duration-300 hover:cursor-pointer"
+                                    >
+                                        Explore Products
+                                        <MoveUpRight size={18} className="transition-transform group-hover:translate-x-1" />
+                                    </button>
+                                </Link>
                             </motion.div>
 
                         </div>

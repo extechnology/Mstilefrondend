@@ -122,11 +122,6 @@
 
 
 
-html {
-  scroll-behavior: smooth;
-}
-
-
 
 ::selection {
   background: black;

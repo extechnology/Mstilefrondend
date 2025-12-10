@@ -50,12 +50,25 @@ export default function PorothermProductPage() {
                                 </div>
                             </div>
 
-                            <button className="hidden md:flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-3 rounded-full shadow-lg transition-all">
-                                <ShoppingCart className="w-4 h-4" /> Order Now
-                            </button>
+                            <a
+                                href={`https://wa.me/919847603333?text=${encodeURIComponent(
+                                    "Hi, I would like to know more about your product: "
+                                )}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <button className="hidden hover:cursor-pointer md:flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-3 rounded-full shadow-lg transition-all">
+                                    <ShoppingCart className="w-4 h-4" /> Order Now
+                                </button>
+                            </a>
+
                         </div>
+
                     </header>
+
                 </motion.div>
+
+
 
                 {/* ---------------- PRODUCTS LIST ---------------- */}
                 <main className="p-2 sm:p-6 space-y-12">
@@ -68,16 +81,21 @@ export default function PorothermProductPage() {
                             viewport={{ once: true, amount: 0.2 }}
                             key={index}
                         >
+
                             <section id={`${p.id}-details`} className="bg-white rounded-2xl border shadow-lg overflow-hidden">
+
 
                                 <div className="md:flex">
 
+
                                     {/* LEFT CONTENT */}
                                     <div className="md:w-1/2 p-6 md:p-10">
+
                                         <h2 className="text-2xl sm:text-3xl font-extrabold mb-2">{p.title}</h2>
                                         <p className="text-sm text-gray-600 mb-4">{p.subtitle}</p>
 
                                         <p className="text-base text-gray-700 leading-relaxed text-justify">{p.heroDescription}</p>
+
 
                                         {/* ADVANTAGES */}
                                         <motion.div
@@ -99,6 +117,7 @@ export default function PorothermProductPage() {
                                             </div>
                                         </motion.div>
 
+
                                         {/* BUTTONS */}
                                         <motion.div
                                             initial={{ opacity: 0, y: 10 }}
@@ -106,17 +125,34 @@ export default function PorothermProductPage() {
                                             transition={{ delay: 0.5, duration: 0.7 }}
                                             viewport={{ once: true, amount: 0.2 }}
                                         >
-                                            <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                                                <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-lg shadow-lg flex items-center gap-2 transition-all">
-                                                    <ShoppingCart className="w-5 h-5" /> Order {p.title.split(" ")[0]}
-                                                </button>
 
-                                                <Link to={'/contact'} className="text-emerald-600 hover:underline flex items-center gap-2">
+                                            <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+
+
+                                                <a
+                                                    href={`https://wa.me/919847603333?text=${encodeURIComponent(
+                                                        "Hi, I would like to know more about your product: " + p.title
+                                                    )}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <button className="bg-emerald-600 hover:cursor-pointer hover:bg-emerald-700 text-white px-5 py-3 rounded-lg shadow-lg flex items-center gap-2 transition-all">
+                                                        <ShoppingCart className="w-5 h-5" /> Order {p.title.split(" ")[0]}
+                                                    </button>
+                                                </a>
+
+
+
+                                                <Link to={'/contact'} className="text-emerald-600 hover:cursor-pointer hover:underline flex items-center gap-2">
                                                     <Zap className="w-4 h-4" /> Request Quote
                                                 </Link>
+
                                             </div>
+
                                         </motion.div>
+
                                     </div>
+
 
                                     {/* RIGHT IMAGE + TABLE */}
                                     <div className="md:w-1/2 bg-linear-to-tr from-amber-50 to-white p-6 md:p-10">
@@ -197,15 +233,25 @@ export default function PorothermProductPage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+
                                 <Link to="/contact">
-                                    <button className="bg-white text-emerald-600 px-5 py-3 rounded-full font-semibold shadow w-full sm:w-auto">
+                                    <button className="bg-white hover:cursor-pointer text-emerald-600 px-5 py-3 rounded-full font-semibold shadow w-full sm:w-auto">
                                         Contact Sales
                                     </button>
                                 </Link>
 
-                                <button className="bg-emerald-800/90 px-5 py-3 rounded-full font-semibold shadow w-full sm:w-auto">
-                                    Get Best Price
-                                </button>
+                                <a
+                                    href={`https://wa.me/919847603333?text=${encodeURIComponent(
+                                        "Hi, I would like to know more about your product: "
+                                    )}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <button className="bg-emerald-800/90 hover:cursor-pointer px-5 py-3 rounded-full font-semibold shadow w-full sm:w-auto">
+                                        Get Best Price
+                                    </button>
+                                </a>
+
                             </div>
                         </section>
                     </motion.div>
