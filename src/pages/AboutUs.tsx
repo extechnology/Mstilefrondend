@@ -114,7 +114,7 @@ export default function About() {
                             className="relative"
                         >
                             <img
-                                src="/Mujeeb-Reham.webp"
+                                src="/Stand with Experience & Vision,Mujeeb Reham.jpg"
                                 alt="Chairman Mujeeb Reham"
                                 loading="lazy"
                                 className="rounded-2xl shadow-2xl w-full object-cover"
@@ -148,7 +148,7 @@ export default function About() {
                         </motion.div>
 
                         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                            <h3 className="text-3xl md:text-4xl font-bold mb-2 font-serif">Md. Sahji</h3>
+                            <h3 className="text-3xl md:text-4xl font-bold mb-2 font-serif">Md. Shaji</h3>
                             <p className="text-md font-semibold text-red-600 mb-4 font-serif">
                                 Director
                             </p>
