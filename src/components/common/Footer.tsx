@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="space-y-6">
 
           <div className="flex items-center gap-2">
-            <img src="/logo-white.png" loading="lazy" className="w-48 h-16 object-contain" alt="foot-logo" />
+            <img src="/MS-TILE-LOGO-WT-PNG.png" loading="lazy" className="w-48 h-16 object-contain" alt="foot-logo" />
           </div>
 
 

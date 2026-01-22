@@ -92,7 +92,7 @@ const Navbar = () => {
         >
 
 
-            <div className="w-full mx-auto px-4 sm:px-6 lg:px-16">
+            <div className="w-full mx-auto px-4 sm:px-6 lg:px-14">
 
 
                 <div className="flex items-center justify-between h-16">
@@ -103,12 +103,11 @@ const Navbar = () => {
 
                         {isTransparent ? (
 
-                            <img src="/logo-white.png" loading="lazy" className="object-contain h-80 w-44" alt="nav-logo" />
+                            <img src="/MS-TILE-LOGO-WT-PNG.png" loading="lazy" className="object-contain h-96 w-48" alt="nav-logo" />
 
                         ) : (
 
-                            <img src="/Nav-dark.png" loading="lazy" className="object-contain h-80 w-44" alt="nav-logo" />
-
+                            <img src="/MS-TILE-LOGO-BL-AND-W-PNG.png" loading="lazy" className="object-contain h-96 w-48" alt="nav-logo" />
                         )}
 
                     </Link>
